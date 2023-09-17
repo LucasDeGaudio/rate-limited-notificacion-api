@@ -14,20 +14,24 @@ class PostgresRepository {
       const query = ` SELECT count(id) FROM history
       WHERE date > current_timestamp - interval '1 minutes' * $1
       and email = $4
+      and type = $5
       union all
       SELECT count(id) FROM history
       WHERE date > current_timestamp - interval '1 hours' * $2
       and email = $4
+      and type = $5
       union all
       SELECT count(id) FROM history
       WHERE date > current_timestamp - interval '1 days' * $3
-      and email = $4`;
+      and email = $4
+      and type = $5`;
 
       const history: any[] = await postgresDb.execute(query, [
         allowedConfig.minutes,
         allowedConfig.hours,
         allowedConfig.days,
         email,
+        type,
       ]);
 
       return {
