@@ -1,0 +1,39 @@
+{
+  "name": "rate-limited-notificacion-api",
+  "version": "1.0.0",
+  "description": "[Backend] Rate-Limited Notification Service",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc --project ./",
+    "watch": "nodemon -r dotenv/config src/server.ts",
+    "dev": "docker-compose up --build -d app",
+    "test:unit": "npx jest --config=jest.config.unit.ts --passWithNoTests --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --watchAll=false --forceExit --runInBand --colors",
+    "test": "npx jest --config=jest.config.ts --passWithNoTests --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --watchAll=false --forceExit --runInBand --logHeapUsage --colors"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-joi-validation": "^5.0.1",
+    "helmet": "^5.0.1",
+    "joi": "^17.6.0",
+    "lodash": "^4.17.21",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^27.4.0",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^18.15.5",
+    "@types/pg": "^8.10.2",
+    "jest": "^27.4.7",
+    "jest-junit": "^14.0.1",
+    "nodemon": "^2.0.21",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  }
+}

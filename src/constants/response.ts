@@ -1,0 +1,25 @@
+export const responseConstants = {
+  httpResponseCode: {
+    OK: 200,
+    CREATED: 201,
+    NO_CONTENT: 204,
+    BAD_REQUEST: 400,
+    UNAUTHORIZED: 401,
+    FORBIDDEN: 403,
+    RESOURCE_NOT_FOUND: 404,
+    REQUEST_TIMEOUT: 408,
+    CONFLICT: 409,
+    INTERNAL_ERROR: 500,
+    UNAVAILABLE_SERVICE: 503,
+  },
+  statusMessage: {
+    OK: 'OK',
+    ERROR: 'ERROR',
+    NOT_FOUND: 'NOT_FOUND',
+    INVALID_REQUEST: 'INVALID_REQUEST',
+    UNAUTHORIZED: 'UNAUTHORIZED',
+    REQUEST_TIMEOUT: 'REQUEST_TIMEOUT',
+    CONFLICT: 'CONFLICT',
+  },
+  responseTimeout: 40000,
+};

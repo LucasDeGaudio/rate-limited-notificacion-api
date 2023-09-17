@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: rate_limited_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    depends_on:
+      - postgres
+    ports:
+      - '8000:8080'
+    environment:
+      NODE_ENV: development
+      PORT: 8080
+    volumes:
+      - ./:/app/
+    stdin_open: true
+    tty: true
+
+  postgres:
+    image: postgres:11
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: rate_limited_db

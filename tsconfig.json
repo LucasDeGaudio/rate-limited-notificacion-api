@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": ["es2021"],
+    "module": "commonjs",
+    "target": "es2021",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "strictNullChecks": false,
+    "outDir": "dist",
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "esModuleInterop": true,
+    "allowJs": false,
+    "declaration": true
+  },
+  "exclude": ["node_modules", "dist"]
+}

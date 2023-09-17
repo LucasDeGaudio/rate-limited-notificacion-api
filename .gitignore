@@ -1,0 +1,28 @@
+# Dependencies
+.npm
+node_modules
+data/
+
+# Logs
+npm-debug.log
+
+# Compiled output
+dist
+
+# System Files
+.DS_Store
+
+# Env files
+.env
+
+# Testing files
+coverage
+junit.xml
+
+# IDE and Extensions
+/.idea
+/.vscode
+/.history
+
+# Data volumes
+/.data
